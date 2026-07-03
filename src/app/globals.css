@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --terracota: #974315;
+  --azul: #788990;
+  --bege: #e3d6c5;
+  --perola: #f0ede4;
+  --verde: #8d957e;
+  --escuro: #1a1714;
+  --texto: #2e2a24;
+}
+
+@theme inline {
+  --color-terracota: var(--terracota);
+  --color-azul: var(--azul);
+  --color-bege: var(--bege);
+  --color-perola: var(--perola);
+  --color-verde: var(--verde);
+  --color-escuro: var(--escuro);
+  --color-texto: var(--texto);
+
+  --font-display: var(--font-playfair);
+  --font-mono: var(--font-dm-mono);
+  --font-serif: var(--font-cormorant);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-perola);
+  color: var(--color-texto);
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+}
+
+/* ── Nota musical flutuante ── */
+@keyframes float-note {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.animate-float-note {
+  animation: float-note 8s ease-in-out infinite;
+}
+
+/* ── Equalizador ── */
+@keyframes eq-bar {
+  0%,
+  100% {
+    transform: scaleY(0.25);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-eq-bar {
+  animation: eq-bar 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* ── Fade/slide utilizado pelo componente Reveal como fallback sem JS ── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-note,
+  .animate-eq-bar {
+    animation: none;
+  }
+}
