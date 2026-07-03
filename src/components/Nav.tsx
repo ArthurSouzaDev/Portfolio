@@ -27,18 +27,18 @@ export default function Nav() {
     <motion.nav
       animate={{ paddingTop: scrolled ? "0.9rem" : "1.4rem", paddingBottom: scrolled ? "0.9rem" : "1.4rem" }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="fixed inset-x-0 top-0 z-100 flex items-center justify-between border-b border-terracota/10 bg-perola/85 px-6 backdrop-blur-md sm:px-12"
+      className="fixed inset-x-0 top-0 z-100 flex flex-col items-center gap-2 border-b border-terracota/10 bg-perola/85 px-6 backdrop-blur-md sm:flex-row sm:justify-between sm:gap-0 sm:px-12"
     >
       <Link
         href="/"
-        className="inline-flex items-center gap-1.5 whitespace-nowrap font-display text-lg tracking-wide text-terracota"
+        className="inline-flex items-center gap-1.5 whitespace-nowrap font-display text-base tracking-wide text-terracota sm:text-lg"
       >
         <span className="inline-flex min-w-[1.2em] items-center justify-center font-mono text-[0.85em] text-azul">
           {"{}"}
         </span>
         Arthur Souza
       </Link>
-      <ul className="flex gap-6 sm:gap-10">
+      <ul className="flex w-full flex-wrap justify-center gap-x-4 gap-y-1 sm:w-auto sm:gap-x-10">
         {LINKS.map((link) => (
           <li key={link.hash}>
             <Link
