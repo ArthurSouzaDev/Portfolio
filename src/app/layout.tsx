@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Mono, Cormorant_Garamond } from "next/font/google"
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
