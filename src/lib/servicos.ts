@@ -197,7 +197,10 @@ export const pequenasAlteracoes = [
 /* ── Termos resumidos ── */
 
 export const termos = [
-  { titulo: "Pagamento", texto: "50% na aprovação da proposta, 50% na entrega. Via Pix." },
+  {
+    titulo: "Pagamento",
+    texto: "50% na aprovação da proposta, 50% na entrega. Via Pix ou cartão de crédito.",
+  },
   {
     titulo: "Prazo",
     texto:
@@ -240,7 +243,8 @@ export const faq = [
   },
   {
     pergunta: "Como funciona o pagamento?",
-    resposta: "50% na aprovação da proposta para iniciar e 50% na entrega. Pagamento via Pix ou cartão de crédito",
+    resposta:
+      "50% na aprovação da proposta para iniciar e 50% na entrega. Pagamento via Pix ou cartão de crédito.",
   },
   {
     pergunta: "Quantas rodadas de revisão estão incluídas?",
