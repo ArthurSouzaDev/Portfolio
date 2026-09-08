@@ -12,6 +12,9 @@ const LINKS = [
   { label: "Contato", hash: "contato" },
 ];
 
+/** Link de rota (não âncora) — destacado por ser o CTA comercial. */
+const CTA = { label: "Contrate seu serviço", href: "/contrate" };
+
 export default function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -49,6 +52,15 @@ export default function Nav() {
             </Link>
           </li>
         ))}
+        <li>
+          <Link
+            href={CTA.href}
+            aria-current={pathname.startsWith(CTA.href) ? "page" : undefined}
+            className="border-b border-terracota/40 text-[0.72rem] tracking-[0.12em] text-terracota uppercase transition-colors hover:border-terracota"
+          >
+            {CTA.label}
+          </Link>
+        </li>
       </ul>
     </motion.nav>
   );

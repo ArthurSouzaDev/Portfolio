@@ -39,6 +39,10 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
+      // Next 16 não sobrescreve mais `scroll-behavior: smooth` durante a
+      // navegação; sem este atributo, trocar de rota rola suavemente a página
+      // inteira em vez de saltar para o topo.
+      data-scroll-behavior="smooth"
       className={`${playfair.variable} ${dmMono.variable} ${cormorant.variable}`}
     >
       <body className="flex min-h-screen flex-col bg-perola text-texto font-mono">
