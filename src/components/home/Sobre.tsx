@@ -27,7 +27,7 @@ export default function Sobre() {
 
           <div className="relative mt-10 h-[200px] w-[200px] shrink-0 justify-self-center before:absolute before:-inset-2.5 before:border before:border-terracota/25 after:absolute after:-bottom-4.5 after:-left-4.5 after:h-20 after:w-20 after:border-b after:border-l after:border-terracota after:opacity-40 sm:justify-self-start">
             <Image
-              src="/GitIcon.jpeg"
+              src="/IMG_3861.jpg"
               alt="Arthur Souza"
               width={200}
               height={200}
