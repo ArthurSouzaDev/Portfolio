@@ -31,8 +31,9 @@ export const entregas = [
     descricao: "Deploy feito e site no ar, com HTTPS e domínio apontado.",
   },
   {
-    titulo: "Código seu",
-    descricao: "Depois da quitação, o projeto é seu. Sem amarras.",
+    titulo: "Código disponível",
+    descricao:
+      "Após a quitação, você pode solicitar o código-fonte e as configurações necessárias para assumir o projeto.",
   },
 ] as const;
 
@@ -130,7 +131,7 @@ export const planosManutencao = [
     destaque: false,
     itens: [
       "Sem mensalidade",
-      "O site continua seu e no ar normalmente",
+      "O site pode continuar publicado normalmente",
       "Modificações cobradas de forma avulsa",
       "Correção de bugs grátis nos primeiros 30 dias",
     ],
@@ -142,7 +143,7 @@ export const notaManutencao =
   "As alterações inclusas nos planos não são acumulativas para os meses seguintes. Nova seção, nova página, redesign, integração ou mudança de escopo são orçados separadamente.";
 
 export const transparenciaHospedagem =
-  "A hospedagem hoje pode funcionar sem custo de servidor para o seu projeto. A manutenção é pelo acompanhamento, suporte, atualizações e pequenas mudanças que eu continuo realizando depois da entrega. Se algum dia o seu site precisar de uma hospedagem paga, eu aviso antes e a gente decide juntos, sem cobrança surpresa.";
+  "A hospedagem hoje pode funcionar sem custo de servidor para o seu projeto. A manutenção é pelo acompanhamento, suporte, atualizações e pequenas mudanças que eu continuo realizando depois da entrega. Se algum serviço pago de terceiros se tornar necessário, eu aviso antes. A contratação e o custo ficam sob responsabilidade do cliente.";
 
 /* ── Tabela de modificações avulsas ── */
 
@@ -199,7 +200,8 @@ export const pequenasAlteracoes = [
 export const termos = [
   {
     titulo: "Pagamento",
-    texto: "50% na aprovação da proposta, 50% na entrega. Via Pix ou cartão de crédito.",
+    texto:
+      "50% na aprovação da proposta, 50% na entrega. Via Pix ou cartão de crédito. O valor total também pode ser pago no cartão, com repasse das taxas.",
   },
   {
     titulo: "Prazo",
@@ -218,66 +220,91 @@ export const termos = [
   {
     titulo: "Propriedade",
     texto:
-      "O código é seu após a quitação. Posso exibir o trabalho no portfólio, salvo pedido de sigilo.",
+      "Após a quitação, você pode solicitar o código-fonte e a transferência. Por padrão, o repositório e a publicação permanecem sob minha gestão técnica. Posso exibir o trabalho no portfólio, salvo pedido de sigilo.",
   },
   { titulo: "Garantia", texto: "Correção de bugs de código por 30 dias após a entrega, sem custo." },
 ] as const;
 
 /* ── FAQ ── */
 
-export const faq = [
+export const faqCategorias = [
   {
-    pergunta: "Qual a diferença entre template e site personalizado?",
-    resposta:
-      "No template eu parto de uma base pronta e adapto à sua marca — é mais rápido e mais barato. No personalizado o layout é desenhado do zero para o seu negócio, com estrutura e visual exclusivos.",
+    titulo: "Projeto e contratação",
+    itens: [
+      {
+        pergunta: "Qual a diferença entre template e site personalizado?",
+        resposta:
+          "No template eu parto de uma base pronta e adapto à sua marca — é mais rápido e mais barato. No personalizado o layout é desenhado do zero para o seu negócio, com estrutura e visual exclusivos.",
+      },
+      {
+        pergunta: "Quanto tempo leva?",
+        resposta:
+          "Template fica pronto em 5 a 10 dias úteis. Personalizada, entre 15 e 30 dias úteis. O prazo só começa a contar quando eu recebo todo o conteúdo.",
+      },
+      {
+        pergunta: "O que eu preciso te enviar?",
+        resposta:
+          "Textos, imagens e logo em boa resolução, além das informações de contato do negócio. Se você não tiver os textos, posso criar a copy como serviço adicional.",
+      },
+      {
+        pergunta: "Como funciona o pagamento?",
+        resposta:
+          "50% na aprovação da proposta para iniciar e 50% na entrega. Pagamento via Pix ou cartão de crédito. O valor total também pode ser pago no cartão, com repasse das taxas.",
+      },
+      {
+        pergunta: "Quantas rodadas de revisão estão incluídas?",
+        resposta:
+          "Duas rodadas de ajustes. Se precisar de mais rodadas ou mudar o escopo do projeto, isso é orçado à parte.",
+      },
+    ],
   },
   {
-    pergunta: "Quanto tempo leva?",
-    resposta:
-      "Template fica pronto em 5 a 10 dias úteis. Personalizada, entre 15 e 30 dias úteis. O prazo só começa a contar quando eu recebo todo o conteúdo.",
+    titulo: "Domínio e publicação",
+    itens: [
+      {
+        pergunta: "Preciso comprar domínio?",
+        resposta:
+          "Sim. O domínio é registrado e pago por você, no seu nome ou CNPJ — assim ele é realmente seu e você nunca fica dependente de terceiros. Um .com.br no Registro.br custa por volta de R$ 40 por ano. Eu faço toda a configuração do apontamento.",
+      },
+      {
+        pergunta: "E a hospedagem, tem custo?",
+        resposta: transparenciaHospedagem,
+      },
+      {
+        pergunta: "Como o site é entregue?",
+        resposta:
+          "O site é entregue publicado, funcionando e configurado no seu domínio. Por padrão, o código-fonte, o repositório e o ambiente de publicação permanecem sob minha gestão técnica, evitando que você precise administrar ferramentas de desenvolvimento e hospedagem. Se quiser assumir essa gestão, você pode solicitar a transferência.",
+      },
+      {
+        pergunta: "E se eu quiser um e-mail com o meu domínio?",
+        resposta:
+          "O e-mail profissional (contato@seudominio.com) não está incluso, porque é um serviço pago à parte. Se você contratar um Google Workspace ou Zoho, eu configuro os registros necessários sem custo adicional.",
+      },
+    ],
   },
   {
-    pergunta: "O que eu preciso te enviar?",
-    resposta:
-      "Textos, imagens e logo em boa resolução, além das informações de contato do negócio. Se você não tiver os textos, posso criar a copy como serviço adicional.",
-  },
-  {
-    pergunta: "Como funciona o pagamento?",
-    resposta:
-      "50% na aprovação da proposta para iniciar e 50% na entrega. Pagamento via Pix ou cartão de crédito.",
-  },
-  {
-    pergunta: "Quantas rodadas de revisão estão incluídas?",
-    resposta:
-      "Duas rodadas de ajustes. Se precisar de mais rodadas ou mudar o escopo do projeto, isso é orçado à parte.",
-  },
-  {
-    pergunta: "Preciso comprar domínio?",
-    resposta:
-      "Sim. O domínio é registrado e pago por você, no seu nome ou CNPJ — assim ele é realmente seu e você nunca fica dependente de terceiros. Um .com.br no Registro.br custa por volta de R$ 40 por ano. Eu faço toda a configuração do apontamento.",
-  },
-  {
-    pergunta: "E a hospedagem, tem custo?",
-    resposta: transparenciaHospedagem,
-  },
-  {
-    pergunta: "Por que pagar manutenção se a hospedagem é grátis?",
-    resposta:
-      "A manutenção não é aluguel de servidor. É o acompanhamento técnico depois da entrega: atualizações de segurança, backup, suporte e as pequenas alterações do dia a dia, sem precisar pedir um orçamento novo a cada ajuste. É opcional — você pode ficar sem plano e pagar apenas quando precisar de alguma modificação.",
-  },
-  {
-    pergunta: "Posso cancelar a manutenção depois?",
-    resposta:
-      "Pode, a qualquer momento. O projeto continua sendo seu: transfiro a hospedagem para a sua conta e entrego o repositório com as instruções de publicação. O domínio já está no seu nome, então nada muda quanto a isso.",
-  },
-  {
-    pergunta: "O código é meu?",
-    resposta:
-      "Sim. Depois da quitação, o projeto é integralmente seu — você pode continuar com outro profissional se quiser.",
-  },
-  {
-    pergunta: "E se eu quiser um e-mail com o meu domínio?",
-    resposta:
-      "O e-mail profissional (contato@seudominio.com) não está incluso, porque é um serviço pago à parte. Se você contratar um Google Workspace ou Zoho, eu configuro os registros necessários sem custo adicional.",
+    titulo: "Depois da entrega",
+    itens: [
+      {
+        pergunta: "Por que pagar manutenção se a hospedagem é grátis?",
+        resposta:
+          "A manutenção não é aluguel de servidor. É o acompanhamento técnico depois da entrega: atualizações de segurança, backup, suporte e as pequenas alterações do dia a dia, sem precisar pedir um orçamento novo a cada ajuste. É opcional — você pode ficar sem plano e pagar apenas quando precisar de alguma modificação.",
+      },
+      {
+        pergunta: "Posso cancelar a manutenção depois?",
+        resposta:
+          "Sim. A manutenção é opcional e pode ser cancelada. Sem um plano ativo, o site pode continuar publicado normalmente, mas alterações, atualizações e outros serviços passam a ser cobrados separadamente. O cancelamento não transfere automaticamente o projeto. Se você quiser assumir a gestão técnica ou trabalhar com outro profissional, pode solicitar a transferência.",
+      },
+      {
+        pergunta: "O código do site é meu?",
+        resposta:
+          "Sim. Após a quitação, você pode solicitar o código-fonte do projeto. Por padrão, o repositório e o ambiente de publicação permanecem sob minha gestão técnica para facilitar suporte, manutenção e futuras alterações. Se preferir assumir a gestão ou trabalhar com outro profissional, é só solicitar a transferência.",
+      },
+      {
+        pergunta: "Posso transferir o site para outro profissional?",
+        resposta:
+          "Sim. Após a quitação, você pode solicitar a transferência do código-fonte e das configurações necessárias para que outro profissional assuma o projeto. A transferência é feita mediante solicitação e não acontece automaticamente na entrega ou no cancelamento da manutenção.",
+      },
+    ],
   },
 ] as const;

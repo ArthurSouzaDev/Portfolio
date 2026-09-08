@@ -189,7 +189,8 @@ export default function EstimadorPreco({ value, onChange }: Props) {
         </p>
         <p className="mt-3 text-[0.72rem] leading-relaxed text-texto/60">
           Estimativa. O valor final é definido depois do briefing, conforme o escopo real do
-          projeto. Pagamento em 50% na aprovação e 50% na entrega.
+          projeto. Pagamento em 50% na aprovação e 50% na entrega (o valor pode ser passado
+          totalmente no cartão, com repasse das taxas).
         </p>
 
         <div className="mt-6 border-t border-terracota/15 pt-5">

@@ -3,12 +3,13 @@ import type { Metadata } from "next";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import CaseGrid from "@/components/contrate/CaseGrid";
+import FaqAccordion from "@/components/contrate/FaqAccordion";
 import { landingPageProjects } from "@/lib/projects";
 import { formatarBRL, PRICING } from "@/lib/pricing";
 import {
   comparativo,
   entregas,
-  faq,
+  faqCategorias,
   modificacoes,
   notaManutencao,
   pequenasAlteracoes,
@@ -317,26 +318,9 @@ export default function ContratePage() {
         <Reveal>
           <SectionHeader title="Dúvidas frequentes" num="06" />
         </Reveal>
-        <RevealGroup className="mx-auto flex max-w-4xl flex-col">
-          {faq.map((item) => (
-            <RevealItem key={item.pergunta}>
-              <details className="group border-b border-terracota/15">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[0.85rem] text-escuro transition-colors hover:text-terracota [&::-webkit-details-marker]:hidden">
-                  {item.pergunta}
-                  <span
-                    className="shrink-0 text-lg text-terracota transition-transform duration-300 group-open:rotate-45"
-                    aria-hidden="true"
-                  >
-                    +
-                  </span>
-                </summary>
-                <p className="pr-10 pb-6 text-[0.78rem] leading-relaxed text-texto/70">
-                  {item.resposta}
-                </p>
-              </details>
-            </RevealItem>
-          ))}
-        </RevealGroup>
+        <Reveal delay={0.05} className="mx-auto max-w-4xl">
+          <FaqAccordion categorias={faqCategorias} />
+        </Reveal>
       </section>
 
       {/* ── Termos resumidos ── */}
