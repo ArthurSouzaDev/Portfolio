@@ -50,6 +50,33 @@ body {
   animation: float-note 8s ease-in-out infinite;
 }
 
+/* ── Movimento breve do arco no hero ── */
+@keyframes cello-bow {
+  0% {
+    transform: translate3d(-8px, 8px, 0) rotate(-1.5deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate3d(8px, -8px, 0) rotate(1.5deg);
+    opacity: 0.78;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+    opacity: 0.58;
+  }
+}
+
+.animate-cello-bow {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-cello-bow {
+    animation: cello-bow 2.8s cubic-bezier(0.77, 0, 0.175, 1) 0.8s both;
+  }
+}
+
 /* ── Equalizador ── */
 @keyframes eq-bar {
   0%,

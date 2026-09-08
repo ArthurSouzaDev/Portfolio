@@ -13,8 +13,8 @@ export default function Sobre() {
         ♩♪♫♬
       </p>
 
-      <div className="mx-auto grid max-w-4xl items-start gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
-        <Reveal className="flex flex-col">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(320px,500px)] lg:gap-20">
+        <Reveal className="flex flex-col justify-center">
           <p className="mb-4 text-[0.65rem] tracking-[0.2em] text-verde uppercase">01 — Sobre</p>
           <h2 className="mb-2 font-display text-4xl leading-tight text-perola">
             Arthur
@@ -25,13 +25,33 @@ export default function Sobre() {
             Backend Developer &amp; Solution Architect
           </p>
 
-          <div className="relative mt-10 h-[200px] w-[200px] shrink-0 justify-self-center before:absolute before:-inset-2.5 before:border before:border-terracota/25 after:absolute after:-bottom-4.5 after:-left-4.5 after:h-20 after:w-20 after:border-b after:border-l after:border-terracota after:opacity-40 sm:justify-self-start">
+          <p className="mt-10 mb-8 font-serif text-xl leading-[1.85] text-bege/80">
+            Desenvolvo APIs, microsserviços e arquiteturas que escalam como uma orquestra em pleno ensaio. A música me
+            ensinou que estrutura e liberdade coexistem — e aplico isso em cada solução que construo.
+          </p>
+          <p className="mb-8 -mt-2 font-serif text-base leading-[1.85] text-bege/80">
+            Atualmente disponível para projetos freelance e consultorias.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {TAGS.map((tag) => (
+              <span
+                key={tag}
+                className="border border-verde/40 px-3.5 py-1.5 text-[0.65rem] tracking-[0.1em] text-verde uppercase transition-colors hover:border-verde hover:text-perola"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.15} className="flex flex-col items-center lg:items-end">
+          <div className="relative aspect-square w-[220px] max-w-full shrink-0 justify-self-center before:absolute before:-inset-2.5 before:border before:border-terracota/25 after:absolute after:-bottom-4.5 after:-left-4.5 after:h-20 after:w-20 after:border-b after:border-l after:border-terracota after:opacity-40 sm:w-[500px] sm:justify-self-start">
             <Image
               src="/IMG_3861.jpg"
               alt="Arthur Souza"
-              width={200}
-              height={200}
-              className="block h-[200px] w-[200px] object-cover grayscale-[20%] contrast-[1.05] transition-[filter] duration-400 hover:grayscale-0 hover:contrast-100"
+              width={400}
+              height={400}
+              className="block h-full w-full object-cover grayscale-[20%] contrast-[1.05] transition-[filter] duration-400 hover:grayscale-0 hover:contrast-100"
             />
             <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
               <svg viewBox="0 0 200 200" className="h-full w-full">
@@ -67,26 +87,6 @@ export default function Sobre() {
               <ellipse cx={158} cy={26} rx={7} ry={5} fill="#974315" opacity={0.7} />
               <line x1={165} y1={26} x2={165} y2={8} stroke="#974315" strokeWidth={1.2} />
             </svg>
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.15}>
-          <p className="mb-8 font-serif text-xl leading-[1.85] text-bege/80">
-            Desenvolvo APIs, microsserviços e arquiteturas que escalam como uma orquestra em pleno ensaio. A música me
-            ensinou que estrutura e liberdade coexistem — e aplico isso em cada solução que construo.
-          </p>
-          <p className="mb-8 -mt-2 font-serif text-base leading-[1.85] text-bege/80">
-            Atualmente disponível para projetos freelance e consultorias.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {TAGS.map((tag) => (
-              <span
-                key={tag}
-                className="border border-verde/40 px-3.5 py-1.5 text-[0.65rem] tracking-[0.1em] text-verde uppercase transition-colors hover:border-verde hover:text-perola"
-              >
-                {tag}
-              </span>
-            ))}
           </div>
         </Reveal>
       </div>

@@ -4,6 +4,15 @@ export type Project = {
   stack: string;
   /** true enquanto o link real ainda não foi adicionado. */
   placeholder?: boolean;
+  /** Segmento do cliente — exibido no CaseGrid da área "Contrate seu serviço". */
+  nicho?: string;
+  /** Uma frase sobre o projeto, para o card do CaseGrid. */
+  descricao?: string;
+  /**
+   * Screenshot em /public. Enquanto não houver, o CaseGrid renderiza um
+   * placeholder tipográfico — basta preencher este campo para trocar.
+   */
+  imagem?: string;
 };
 
 export const backendProjects: Project[] = [
@@ -29,16 +38,30 @@ export const backendProjects: Project[] = [
  * link real, remova `placeholder: true` e ajuste `stack`.
  */
 export const landingPageProjects: Project[] = [
-  { name: "morningstar photographies", 
+  {
+    name: "morningstar photographies",
     href: "https://morningstarphotografie.com.br",
-     stack: "NextJs · Type · React", 
-     placeholder: false },
-  { name: "Tudo On Telecomunicações", 
-    href: "https://landing-page-tudo-on.vercel.app", 
-    stack: "NextJs · Type · React", 
-    placeholder: false },
-  { name: "Zero Lixo Palmas",
-    href: "https://landing-page-coletivo-lixo.vercel.app", 
     stack: "NextJs · Type · React",
-    placeholder: false },
+    placeholder: false,
+    nicho: "Fotografia",
+    descricao: "Portfólio visual com galeria e contato direto para orçamento de ensaios.",
+    imagem: "/cases/morningstar.jpg",
+  },
+  {
+    name: "Tudo On Telecomunicações",
+    href: "https://landing-page-tudo-on.vercel.app",
+    stack: "NextJs · Type · React",
+    placeholder: false,
+    nicho: "Telecomunicações",
+    descricao: "Página de planos de internet com captação de leads pelo WhatsApp.",
+    imagem: "/cases/tudo-on.jpg",
+  },
+  {
+    name: "Zero Lixo Palmas",
+    href: "https://landing-page-coletivo-lixo.vercel.app",
+    stack: "NextJs · Type · React",
+    placeholder: false,
+    nicho: "Coletivo ambiental",
+    descricao: "Site institucional do coletivo, com agenda de ações e formulário de adesão.",
+  },
 ];

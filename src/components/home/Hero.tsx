@@ -4,11 +4,11 @@ import FloatingNotes from "@/components/FloatingNotes";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden px-6 pt-32 pb-16 sm:px-12">
+    <section id="hero" className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pt-32 pb-16 sm:px-12">
       <HeroStaff />
       <FloatingNotes />
 
-      <Reveal className="relative z-10 max-w-2xl">
+      <Reveal className="relative z-10 max-w-2xl lg:max-w-[52%] xl:max-w-2xl">
         <p className="mb-6 flex items-center gap-3 text-[0.65rem] tracking-[0.2em] text-azul uppercase">
           <span className="block h-px w-8 bg-azul" />
           Portfólio — Backend Dev &amp; Músico
@@ -28,7 +28,91 @@ export default function Hero() {
           ↳ Falar sobre seu projeto
         </Link>
       </Reveal>
+
+      <HeroCello />
     </section>
+  );
+}
+
+function HeroCello() {
+  return (
+    <div
+      className="pointer-events-none relative z-0 mt-8 flex h-[260px] w-full shrink-0 items-center justify-center sm:h-[320px] lg:absolute lg:inset-y-0 lg:right-[2%] lg:mt-0 lg:h-auto lg:w-[44%] xl:right-[5%] xl:w-[42%]"
+      aria-hidden="true"
+    >
+      <svg
+        viewBox="0 0 520 680"
+        className="h-full w-full max-w-[260px] overflow-visible sm:max-w-[320px] lg:h-[68vh] lg:min-h-[460px] lg:max-w-[560px] lg:max-h-[680px]"
+        fill="none"
+      >
+        <circle cx="260" cy="350" r="238" stroke="var(--color-terracota)" strokeOpacity="0.1" />
+        <circle cx="260" cy="350" r="198" stroke="var(--color-azul)" strokeOpacity="0.08" strokeDasharray="3 14" />
+
+        <g strokeLinecap="round" strokeLinejoin="round">
+          <path
+            d="M260 207c-34-27-67-7-70 32-3 34 27 47 14 82-11 30-49 40-56 91-9 68 36 133 97 140v23h30v-23c61-7 106-72 97-140-7-51-45-61-56-91-13-35 17-48 14-82-3-39-36-59-70-32Z"
+            fill="var(--color-terracota)"
+            fillOpacity="0.08"
+            stroke="var(--color-terracota)"
+            strokeOpacity="0.72"
+            strokeWidth="2"
+          />
+
+          <path
+            d="m247 213 6-126h14l6 126"
+            fill="var(--color-bege)"
+            fillOpacity="0.34"
+            stroke="var(--color-escuro)"
+            strokeOpacity="0.48"
+            strokeWidth="2"
+          />
+          <path
+            d="M260 88c-18-2-25-19-14-31 7-8 23-6 26 5 3 10-5 17-13 14"
+            stroke="var(--color-terracota)"
+            strokeOpacity="0.78"
+            strokeWidth="3"
+          />
+          <path d="M246 101h-17m45 18h17" stroke="var(--color-escuro)" strokeOpacity="0.5" strokeWidth="3" />
+
+          <path
+            d="m251 119 18 1 16 310h-50l16-311Z"
+            fill="var(--color-escuro)"
+            fillOpacity="0.12"
+            stroke="var(--color-escuro)"
+            strokeOpacity="0.42"
+            strokeWidth="1.5"
+          />
+          <path d="M253 81v451m14-451v451" stroke="var(--color-azul)" strokeOpacity="0.5" />
+
+          <path
+            d="M222 400c22-9 54-9 76 0m-67 8 4-24m54 24-4-24"
+            stroke="var(--color-terracota)"
+            strokeOpacity="0.68"
+            strokeWidth="3"
+          />
+          <path
+            d="m244 443 32 1 7 80c-12 18-34 18-46 0l7-81Z"
+            fill="var(--color-escuro)"
+            fillOpacity="0.14"
+            stroke="var(--color-escuro)"
+            strokeOpacity="0.46"
+            strokeWidth="1.5"
+          />
+
+          <path d="M207 343c-15 12-16 31-5 42m5-26-10 4" stroke="var(--color-terracota)" strokeOpacity="0.62" strokeWidth="3" />
+          <path d="M313 343c15 12 16 31 5 42m-5-26 10 4" stroke="var(--color-terracota)" strokeOpacity="0.62" strokeWidth="3" />
+
+          <path d="M260 575v55" stroke="var(--color-escuro)" strokeOpacity="0.5" strokeWidth="2" />
+          <circle cx="260" cy="635" r="4" fill="var(--color-terracota)" fillOpacity="0.68" />
+        </g>
+
+        <g className="animate-cello-bow" strokeLinecap="round" opacity="0.58">
+          <path d="M393 156 334 557" stroke="var(--color-terracota)" strokeOpacity="0.72" strokeWidth="4" />
+          <path d="m403 158-57 401" stroke="var(--color-escuro)" strokeOpacity="0.32" strokeWidth="1.5" />
+          <path d="m329 550 22 4-3 21-24-4Z" fill="var(--color-escuro)" fillOpacity="0.5" />
+        </g>
+      </svg>
+    </div>
   );
 }
 
