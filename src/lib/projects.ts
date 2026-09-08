@@ -45,6 +45,7 @@ export const landingPageProjects: Project[] = [
     placeholder: false,
     nicho: "Fotografia",
     descricao: "Portfólio visual com galeria e contato direto para orçamento de ensaios.",
+    imagem: "/cases/morningstar.jpg",
   },
   {
     name: "Tudo On Telecomunicações",
@@ -53,6 +54,7 @@ export const landingPageProjects: Project[] = [
     placeholder: false,
     nicho: "Telecomunicações",
     descricao: "Página de planos de internet com captação de leads pelo WhatsApp.",
+    imagem: "/cases/tudo-on.jpg",
   },
   {
     name: "Zero Lixo Palmas",
