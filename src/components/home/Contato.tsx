@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
 const LINKS = [
@@ -19,6 +20,12 @@ export default function Contato() {
           <h2 className="max-w-lg font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.15] text-perola">
             Vamos criar algo que <em className="text-bege not-italic italic">vale a pena ouvir.</em>
           </h2>
+          <Link
+            href="/contrate"
+            className="mt-8 inline-block bg-perola px-8 py-4 text-[0.7rem] tracking-[0.12em] whitespace-nowrap text-terracota uppercase transition-opacity hover:opacity-85 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-perola"
+          >
+            Contratar serviços
+          </Link>
         </Reveal>
         <Reveal delay={0.2} className="flex flex-col gap-4">
           {LINKS.map((link) => (
