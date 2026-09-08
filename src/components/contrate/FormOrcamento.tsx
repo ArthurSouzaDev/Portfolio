@@ -17,6 +17,7 @@ type Briefing = {
   nome: string;
   contato: string;
   nicho: string;
+  publicoAlvo: string;
   negocio: string;
   objetivo: string;
   temLogo: string;
@@ -31,6 +32,7 @@ const BRIEFING_INICIAL: Briefing = {
   nome: "",
   contato: "",
   nicho: "",
+  publicoAlvo: "",
   negocio: "",
   objetivo: OBJETIVOS[0],
   temLogo: "Não",
@@ -52,6 +54,7 @@ function montarMensagem(b: Briefing, estimativa: EstimativaInput): string {
     `Nicho / segmento: ${b.nicho}`,
   ];
 
+  if (b.publicoAlvo.trim()) linhas.push(`Público-alvo: ${b.publicoAlvo}`);
   if (b.negocio.trim()) linhas.push(`Sobre o negócio: ${b.negocio}`);
   linhas.push(`Objetivo da página: ${b.objetivo}`);
   linhas.push(`Já tenho logo/identidade: ${b.temLogo}`);
@@ -135,6 +138,21 @@ export default function FormOrcamento({ estimativa }: { estimativa: EstimativaIn
           onChange={(e) => set("nicho", e.target.value)}
           aria-invalid={tentouEnviar && faltando.nicho}
           className={`${INPUT} ${erro(faltando.nicho)}`}
+        />
+      </div>
+
+      {/* Público-alvo */}
+      <div>
+        <label htmlFor={campo("publicoAlvo")} className={LABEL}>
+          Quem é o público ideal que a página precisa convencer?
+        </label>
+        <textarea
+          id={campo("publicoAlvo")}
+          rows={2}
+          placeholder="Ex.: pequenos empresários que precisam atrair clientes pelo WhatsApp"
+          value={b.publicoAlvo}
+          onChange={(e) => set("publicoAlvo", e.target.value)}
+          className={`${INPUT} resize-y border-terracota/20`}
         />
       </div>
 
