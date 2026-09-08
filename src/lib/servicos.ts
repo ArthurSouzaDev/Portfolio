@@ -240,7 +240,7 @@ export const faq = [
   },
   {
     pergunta: "Como funciona o pagamento?",
-    resposta: "50% na aprovação da proposta para iniciar e 50% na entrega. Pagamento via Pix.",
+    resposta: "50% na aprovação da proposta para iniciar e 50% na entrega. Pagamento via Pix ou cartão de crédito",
   },
   {
     pergunta: "Quantas rodadas de revisão estão incluídas?",
