@@ -47,7 +47,7 @@ export default function Sobre() {
         <Reveal delay={0.15} className="flex flex-col items-center lg:items-end">
           <div className="relative aspect-square w-[220px] max-w-full shrink-0 justify-self-center before:absolute before:-inset-2.5 before:border before:border-terracota/25 after:absolute after:-bottom-4.5 after:-left-4.5 after:h-20 after:w-20 after:border-b after:border-l after:border-terracota after:opacity-40 sm:w-[500px] sm:justify-self-start">
             <Image
-              src="/IMG_3861.jpg"
+              src="/principal.jpeg"
               alt="Arthur Souza"
               width={400}
               height={400}
