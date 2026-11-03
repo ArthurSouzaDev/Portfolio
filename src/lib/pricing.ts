@@ -25,7 +25,7 @@ export const PRICING = {
       valor: 80,
     },
     analytics: { label: "Google Analytics / Meta Pixel", valor: 100 },
-    integracaoCrm: { label: "Integração com CRM / e-mail mkt", valor: 250},
+    integracaoCrm: { label: "Integração com CRM / e-mail mkt", valor: 400},
   },
   /** Entrega em menos de 7 dias. */
   urgenciaMultiplicador: 1.3,
