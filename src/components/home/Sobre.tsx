@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 
-const TAGS = ["Node.js", "Python", "C#", "MongoDb", "Arquitetura", "APIs REST"];
+const TAGS = ["Node.js", "Python", "C#", "MongoDb", "Arquitetura", "APIs REST","NextJs"];
 
 export default function Sobre() {
   return (
